@@ -1,17 +1,15 @@
 # Auditoría Web · Codelab
 
-Herramienta gratuita de **Codelab** para analizar cualquier web: velocidad, SEO, accesibilidad y buenas prácticas, con puntuación, métricas de carga y la lista de mejoras ordenada por impacto. Sirve para captar clientes y vender los servicios de auditoría experta, optimización y seguimiento mensual.
+Herramienta gratuita de **Codelab** que analiza cualquier web al momento: **seguridad, SEO, accesibilidad y velocidad** (36 comprobaciones), con nota por áreas, datos clave, la lista de problemas explicada en lenguaje sencillo con cómo arreglarlos y lo que ya está bien. Sirve para captar clientes y vender auditoría experta, optimización y seguimiento.
 
-- Textos en castellano y catalán (`i18n.js`), tema claro y oscuro.
-- El informe se puede descargar en PDF desde el navegador.
-- `#ejemplo` al final de la dirección abre directamente el informe de ejemplo.
+- Página: `index.html` (castellano y catalán, tema claro y oscuro, informe descargable en PDF).
+- `#ejemplo` al final de la dirección abre el informe de ejemplo (`data/ejemplo.json`, análisis real de consultasyvisitas.pauizel.com).
+- `checks.js`: textos de cada comprobación. `config.js`: dirección del servidor y correo de contacto.
 
-## Puesta en marcha
+## Servidor (`worker/`)
 
-Los análisis usan la API gratuita de Google PageSpeed Insights. **Sin clave propia, Google rechaza casi todas las peticiones** y la página muestra el informe de ejemplo con un aviso.
+Cloudflare Worker gratuito que visita la web, la analiza y devuelve el informe. No guarda nada.
 
-1. Crea una clave en https://developers.google.com/speed/docs/insights/v5/get-started (botón «Get a Key»).
-2. En Google Cloud, restríngela a *Sitios web* con el dominio donde está publicada esta página.
-3. Pégala en `config.js` (`apiKey`) y cambia también `email` por el correo real.
-
-El informe de ejemplo (`data/`) es un análisis real de consultasyvisitas.pauizel.com hecho con Lighthouse.
+- En producción: https://codelab-auditoria.codelab-pauizel.workers.dev
+- Desplegar cambios: `cd worker && npx wrangler deploy`
+- Opcional: añade la nota de velocidad de Google con una clave gratuita de PageSpeed Insights: `npx wrangler secret put PSI_KEY`

@@ -1,0 +1,11 @@
+name = "codelab-auditoria"
+main = "src/index.js"
+compatibility_date = "2025-09-01"
+workers_dev = true
+
+[vars]
+# Orígenes que pueden usar la API, separados por comas. "*" = cualquiera.
+ALLOWED_ORIGINS = "*"
+
+# Opcional: clave gratuita de Google PageSpeed Insights para añadir la nota de velocidad de Google.
+# Se guarda como secreto (no aquí):  npx wrangler secret put PSI_KEY

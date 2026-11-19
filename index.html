@@ -66,14 +66,10 @@
             <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg>
             <input id="url" name="url" type="text" inputmode="url" autocomplete="url" spellcheck="false" placeholder="www.tuweb.com" data-i18n-ph="form.ph" required>
           </div>
-          <div class="scan__device" role="radiogroup" aria-label="Dispositivo">
-            <label><input type="radio" name="device" value="mobile" checked><span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2"/><path d="M11 18.5h2"/></svg><b data-i18n="form.mobile">Móvil</b></span></label>
-            <label><input type="radio" name="device" value="desktop"><span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg><b data-i18n="form.desktop">Ordenador</b></span></label>
-          </div>
           <button class="btn scan__btn" type="submit" id="scanBtn"><span data-i18n="form.btn">Analizar mi web</span> <span class="arrow">→</span></button>
         </form>
         <p class="scan__error" id="formError" role="alert" hidden></p>
-        <p class="scan__meta reveal" style="--d:.3s"><span data-i18n="form.meta">Gratis · Sin registro · Con la tecnología de Google PageSpeed Insights</span> · <button type="button" class="linklike" id="sampleBtn" data-i18n="form.sample">Ver un informe de ejemplo</button></p>
+        <p class="scan__meta reveal" style="--d:.3s"><span data-i18n="form.meta">Gratis · Sin registro · Resultado en segundos</span> · <button type="button" class="linklike" id="sampleBtn" data-i18n="form.sample">Ver un informe de ejemplo</button></p>
       </div>
     </section>
 
@@ -168,8 +164,8 @@
         </div>
         <div class="faq__list">
           <details class="reveal"><summary data-i18n="q.1q">¿El análisis es realmente gratis?</summary><div class="faq__a"><p data-i18n="q.1a">Sí. Puedes analizar tu web todas las veces que quieras, sin registrarte ni dejar tus datos.</p></div></details>
-          <details class="reveal" style="--d:.06s"><summary data-i18n="q.2q">¿De dónde salen los datos?</summary><div class="faq__a"><p data-i18n="q.2a">Usamos Google PageSpeed Insights, la misma herramienta con la que Google mide la calidad de las webs. Los resultados pueden variar ligeramente entre un análisis y otro.</p></div></details>
-          <details class="reveal" style="--d:.12s"><summary data-i18n="q.3q">¿Por qué la nota en móvil es más baja?</summary><div class="faq__a"><p data-i18n="q.3a">El análisis móvil simula un teléfono de gama media con una conexión lenta, que es la situación real de muchos de tus clientes. Por eso es más exigente.</p></div></details>
+          <details class="reveal" style="--d:.06s"><summary data-i18n="q.2q">¿Qué revisa exactamente el análisis?</summary><div class="faq__a"><p data-i18n="q.2a">Usamos Google PageSpeed Insights, la misma herramienta con la que Google mide la calidad de las webs. Los resultados pueden variar ligeramente entre un análisis y otro.</p></div></details>
+          <details class="reveal" style="--d:.12s"><summary data-i18n="q.3q">¿Guardáis mi web o mis datos?</summary><div class="faq__a"><p data-i18n="q.3a">El análisis móvil simula un teléfono de gama media con una conexión lenta, que es la situación real de muchos de tus clientes. Por eso es más exigente.</p></div></details>
           <details class="reveal" style="--d:.18s"><summary data-i18n="q.4q">¿Podéis arreglar mi web aunque no la hayáis hecho vosotros?</summary><div class="faq__a"><p data-i18n="q.4a">Sí. Trabajamos con webs hechas con WordPress, Shopify, Wix y desarrollos a medida. Te diremos qué se puede mejorar en tu caso antes de empezar.</p></div></details>
         </div>
       </div>
@@ -206,6 +202,7 @@
 
   <script src="config.js"></script>
   <script src="i18n.js"></script>
+  <script src="checks.js"></script>
   <script src="main.js"></script>
 </body>
 </html>
